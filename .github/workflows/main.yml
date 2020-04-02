@@ -34,12 +34,6 @@ jobs:
           cd build/linux/
           zip -r linux-release.zip release
 
-      # - run: |
-      #     cd app
-      #     npm i
-      #     npm run upload apk ${{ secrets.ACCOUNT }}
-      #     npm run upload linux ${{ secrets.ACCOUNT }}
-
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@v1.3.0
         with:
@@ -77,11 +71,6 @@ jobs:
           cd build/macos/Build/Products/Release
           ditto -c -k --sequesterRsrc --keepParent flutter_uis.app macos-release.zip
 
-      # - run: |
-      #     cd app
-      #     npm i
-      #     npm run upload macos ${{ secrets.ACCOUNT }}
-
       - uses: ncipollo/release-action@v1
         with:
           artifacts: 'app/build/macOS/Build/Products/Release/macos-release.zip'
@@ -109,12 +98,6 @@ jobs:
           flutter build windows --release
           cd build\windows\x64\Release
           Compress-Archive -Path Runner -DestinationPath windows-release.zip
-
-      # Windows prints the secret variable in log taht's why It's disabled for now
-      # - run: |
-      #     cd app
-      #     npm i
-      #     npm run upload windows ${{ secrets.ACCOUNT }}
 
       - name: Windows release build for github
         uses: ncipollo/release-action@v1
