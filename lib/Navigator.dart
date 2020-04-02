@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:firebase/firebase.dart' as firebase;
 
 import './configs/Theme.dart' as theme;
 import 'package:flutter_minesweeper/io/io.dart';
@@ -52,7 +51,7 @@ class AppNavigator extends StatelessWidget {
           accentColor: theme.primary,
         ),
         navigatorObservers: observers,
-        home: HomeScreen(),
+        home: GameScreen(),
         routes: <String, WidgetBuilder>{
           "home": (ctx) => new HomeScreen(),
           "about": (ctx) => new AboutAppScreen(),
