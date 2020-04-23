@@ -3,7 +3,7 @@ import 'package:flutter_minesweeper/UI.dart';
 
 import 'package:flutter_minesweeper/configs/AppDimensions.dart';
 
-class Dimensions {
+class GameDimensions {
   static init(BuildContext context) {
     AppDimensions.init(context);
   }

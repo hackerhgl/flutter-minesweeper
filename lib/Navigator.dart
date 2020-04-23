@@ -46,7 +46,7 @@ class AppNavigator extends StatelessWidget {
           accentColor: theme.primary,
         ),
         darkTheme: ThemeData(
-          brightness: Brightness.dark,
+          // brightness: Brightness.dark,
           primaryColor: theme.primary,
           accentColor: theme.primary,
         ),

@@ -20,9 +20,14 @@ class Utils {
     ));
   }
 
-  static double rangeMap(
-      double number, double inMin, double inMax, double outMin, double outMax) {
-    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+  static double rangeMap({
+    double value,
+    double inMin = 0.0,
+    double inMax = 1.0,
+    double outMin,
+    double outMax,
+  }) {
+    return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
   }
 
   static launchUrl(link) async {

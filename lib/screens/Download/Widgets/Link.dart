@@ -31,9 +31,17 @@ class _LinkState extends State<Link> with HoverWidgetMixin {
         border: Border.all(width: 2, color: theme.primary),
         boxShadow: [
           BoxShadow(
-            blurRadius: Utils.rangeMap(this.animation.value, 0.0, 1.0, 4, 8),
+            blurRadius: Utils.rangeMap(
+              value: this.animation.value,
+              outMin: 4,
+              outMax: 8,
+            ),
             color: theme.primary.withOpacity(
-              Utils.rangeMap(this.animation.value, 0.0, 1.0, 0.3, 0.6),
+              Utils.rangeMap(
+                value: this.animation.value,
+                outMin: 0.3,
+                outMax: 0.6,
+              ),
             ),
           )
         ],

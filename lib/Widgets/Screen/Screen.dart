@@ -95,11 +95,9 @@ class ScreenState extends State<Screen> with AnimationControllerMixin {
 
     return Positioned(
       bottom: Utils.rangeMap(
-        popUpAnimation.value,
-        0.0,
-        1.0,
-        -30,
-        0.0,
+        value: popUpAnimation.value,
+        outMin: -30,
+        outMax: 0.0,
       ),
       right: 0,
       child: Opacity(
