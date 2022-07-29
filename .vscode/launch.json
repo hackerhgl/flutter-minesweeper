@@ -1,0 +1,18 @@
+{
+	"version": "1.0.0",
+	"configurations": [
+		{
+			"name": "Flutter",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "iPhone 13 mini (mobile)",
+			"deviceId": "FDE7DAA6-4631-4AA8-856E-D189DDCA3F7E",
+			"type": "dart",
+			"request": "launch",
+			"os": "ios",
+			"args": []
+		}
+	]
+}
