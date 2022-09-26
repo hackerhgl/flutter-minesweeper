@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:minesweeper/providers/app/app.dart';
@@ -17,8 +15,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     final state = ref.watch(appProvider);
     final notifier = ref.read(appProvider.notifier);
 
-    print(state.runtimeType);
-
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
@@ -26,7 +22,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Splash screen"),
+            Text("Splash screen" + state.runtimeType.toString()),
             ElevatedButton(
               onPressed: () {
                 notifier.init();
